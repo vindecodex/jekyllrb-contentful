@@ -1,0 +1,6 @@
+{% for post in site.data.contentful.spaces.links.persons %}
+<div class="post">
+  <h1>{{ post.first_name }} {{ post.last_name }}</h1>
+  <p>{{ post.qoutes }}</p>
+</div>
+{% endfor %}
