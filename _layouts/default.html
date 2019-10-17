@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -8,6 +7,11 @@
 </head>
 
 <body>
-  {{content}}
+    {% include navigation.html %}
+    <div class="content">
+    {{ content }}
+    {% include users-list.html %}
+    </div>
 </body>
+
 </html>

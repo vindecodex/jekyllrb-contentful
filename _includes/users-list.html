@@ -1,0 +1,7 @@
+<aside>
+  <ul>
+    {% for item in site.data.admins %}
+    <li>{{ item.id }} - {{ item.username }}</li>
+    {% endfor %}
+  </ul>
+</aside>

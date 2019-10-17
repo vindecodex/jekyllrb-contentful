@@ -32,6 +32,11 @@ github_username: vindecodex
 # Build settings
 plugins:
 
+contentful:
+  spaces:
+    - links:
+        space: 6sqgd61ctg5h
+        access_token: r1L36G0edffLovcZsWjwOa322u70MxlnqnXJJVukFog
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
