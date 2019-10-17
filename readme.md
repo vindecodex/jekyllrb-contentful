@@ -45,3 +45,21 @@ contentful:
         space: 6sqgd61ctg5h
         access_token: r1L36G0edffLovcZsWjwOa322u70MxlnqnXJJVukFog
 ```
+
+###### Deployment
+- deployed it through firebase
+- `bundle exec jekyll build`
+- `npm install -g firebase-tools`
+- `firebase login`
+- create firebase project on firebase app
+- cd to your project directory
+- `firebase init`
+- select hosting
+- select existing app
+- public directory should be `_sitie`
+- configure as single-page to `no`
+- dont override 404.html `no`
+- dont override _site/index.html `no`
+- `firebase deploy`
+
+use `bundle exec jekyll build` for deployement
