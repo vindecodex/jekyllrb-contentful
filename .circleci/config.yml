@@ -1,6 +1,5 @@
 version: 2
 jobs: 
-  build: 
   steps:
     - run:
         name: jekyll contentful
