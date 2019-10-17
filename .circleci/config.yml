@@ -1,0 +1,13 @@
+version: 2
+jobs: 
+  build: 
+  steps:
+    - run:
+        name: jekyll contentful
+        command: bundle exec jekyll contentful
+    - run:
+        name: jekyll build
+        command: bundle exec jekyll build
+    - run:
+        name: firebase deploy
+        command: firebase deploy

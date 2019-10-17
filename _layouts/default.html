@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Jekyllrb | {{ page.title }}</title>
   <link rel="stylesheet" href="../assets/css/default.css">
+  <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% endif %}" />
 </head>
 
 <body>
