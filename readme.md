@@ -2,6 +2,7 @@
 
 ###### Requirements
 1. Ruby version >= 2.4.0 using rbenv
+
   `if you have a ruby already install as default then you install using rbenv, to switch from rbenv ruby you can try this code:`
 
   ```
