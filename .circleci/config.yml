@@ -29,6 +29,7 @@ jobs:
       - run: gem update --system
       - run: gem install bundler
       - run: bundle install
+      - run: npm install -g firebase-tools
 
 
       - run:
@@ -37,3 +38,6 @@ jobs:
       - run:
           name: install dependencies
           command: bundle exec jekyll build
+      - run:
+          name: Deploy
+          command: firebase deploy --only hosting:jekyllrb-contentful
