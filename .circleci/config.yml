@@ -17,9 +17,18 @@ jobs:
     steps:
       - checkout
 
+      # - run: gem update --system
+      # - run: gem install bundler
+      # - run: npm install --save firebase-tools
+      - run: bundle install
+
       - run:
           name: Jekyll contentful
           command: bundle exec jekyll contentful
+      - run:
+          name: Update Bundler
+          command: gem update --system && gem install bundler
+          when: on_fail
       - run:
           name: install dependencies
           command: bundle exec jekyll build
@@ -27,7 +36,6 @@ jobs:
           name: Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
       - run:
-          name: Installing Deps
-          command: gem update --system && gem install bundler && npm install --save firebase-tools && bundle install && bundle exec jekyll contentful && bundle exec jekyll build && ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+          name: Install firebase-tools
+          command: npm install --save firebase-tools && ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
           when: on_fail
-
