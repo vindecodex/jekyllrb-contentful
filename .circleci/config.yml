@@ -18,6 +18,11 @@ jobs:
 
     working_directory: ~/repo
 
+    checkout:
+      post:
+        - bundle install
+        - bash automated_build.sh
+
     steps:
       - checkout
 
@@ -32,4 +37,3 @@ jobs:
       - run:
           name: install dependencies
           command: bundle exec jekyll build
-
