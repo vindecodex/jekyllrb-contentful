@@ -9,12 +9,6 @@ jobs:
 
     working_directory: ~/repo
 
-    dependencies:
-      pre:
-        - gem update --system
-        - gem install bundler
-        - npm install --save firebase-tools
-
     checkout:
       post:
         - bundle install
@@ -23,6 +17,9 @@ jobs:
     steps:
       - checkout
 
+      - run: gem update --system
+      - run: gem install bundler
+      - run: npm install --save firebase-tools
       - run: bundle install
 
       - run:
