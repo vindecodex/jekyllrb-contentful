@@ -5,4 +5,4 @@ _site
 vendor
 
 _data/contentful/spaces
-#node_modules
+node_modules
