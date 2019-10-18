@@ -31,6 +31,7 @@ jobs:
       - run: gem install bundler
       - run: bundle install
       - run: npm set prefix=/home/circleci/npm && echo 'export PATH=$HOME/circleci/npm/bin:$PATH' >> /home/circleci/.bashrc
+      - run: npm install
       - run: npm install -g firebase-tools --unsafe-perm
 
       - run:
@@ -41,4 +42,4 @@ jobs:
           command: bundle exec jekyll build
       - run:
           name: Deploy
-          command: ls
+          command: ../../npm/lib/node_modules/firebase-tools/lib/bin/firebase --version
