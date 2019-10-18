@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vindecodex/jekyllrb-contentful/issues"
   },
-  "homepage": "https://github.com/vindecodex/jekyllrb-contentful#readme"
+  "homepage": "https://github.com/vindecodex/jekyllrb-contentful#readme",
+  "dependencies": {
+    "firebase-tools": "^7.6.1"
+  }
 }
