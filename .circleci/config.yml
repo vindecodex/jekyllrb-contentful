@@ -31,7 +31,7 @@ jobs:
       - run: gem install bundler
       - run: bundle install
       - run: npm set prefix=/home/circleci/npm && echo 'export PATH=$HOME/circleci/npm/bin:$PATH' >> /home/circleci/.bashrc
-      - run: npm install -g firebase-tools
+      - run: npm install -g firebase-tools --unsafe-perm
 
       - run:
           name: Jekyll contentful
