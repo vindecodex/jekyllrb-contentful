@@ -23,7 +23,7 @@ jobs:
       - run: bundle install
       - run:
           name: Update Bundler
-          command: gem update --system && gem install bundler
+          command: gem update --system && gem install bundler && bundle install
           when: on_fail
       - run:
           name: Jekyll contentful
