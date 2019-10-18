@@ -40,4 +40,4 @@ jobs:
           # command: bundle exec jekyll build
       - run:
           name: Deploy
-          command: ls
+          command: ./node_modules/.bin/firebase --version
