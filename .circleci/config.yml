@@ -30,7 +30,7 @@ jobs:
       - run: gem update --system
       - run: gem install bundler
       - run: bundle install
-      - run: npm install -g firebase-tools
+      - run: npm install firebase-tools
 
       - run:
           name: Jekyll contentful
