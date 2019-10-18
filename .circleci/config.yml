@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.6.3-node-browsers
-      - image: circleci/node:latest
+      - image: circleci/node:12.4.0
         environment:
             BUNDLER_VERSION: 2.0.2
 
