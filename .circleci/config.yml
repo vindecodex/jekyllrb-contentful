@@ -1,21 +1,11 @@
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/ruby:2.6.3-node-browsers
       - image: circleci/node:latest
         environment:
             BUNDLER_VERSION: 2.0.2
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
 
     working_directory: ~/repo
 
@@ -29,15 +19,15 @@ jobs:
 
       - run: gem update --system
       - run: gem install bundler
-      # - run: bundle install
+      - run: bundle install
       - run: npm install --save firebase-tools
 
-      # - run:
-          # name: Jekyll contentful
-          # command: bundle exec jekyll contentful
-      # - run:
-          # name: install dependencies
-          # command: bundle exec jekyll build
+      - run:
+          name: Jekyll contentful
+          command: bundle exec jekyll contentful
+      - run:
+          name: install dependencies
+          command: bundle exec jekyll build
       - run:
           name: Deploy
-          command: ./node_modules/.bin/firebase --version
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
