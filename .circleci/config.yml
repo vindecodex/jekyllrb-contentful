@@ -8,6 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.6.3-node-browsers
+      - image: circleci/node:latest
         environment:
             BUNDLER_VERSION: 2.0.2
 
@@ -30,7 +31,6 @@ jobs:
       - run: gem install bundler
       - run: bundle install
       - run: npm install -g firebase-tools
-
 
       - run:
           name: Jekyll contentful
