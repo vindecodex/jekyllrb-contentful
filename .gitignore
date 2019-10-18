@@ -4,4 +4,5 @@ _site
 .jekyll-metadata
 vendor
 
-./_data/contentful/spaces
+_data/contentful/spaces
+node_modules

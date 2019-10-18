@@ -1,0 +1,19 @@
+{
+  "name": "jekyllrb-contentful",
+  "version": "1.0.0",
+  "description": "###### Requirements 1. Ruby version >= 2.4.0 using rbenv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vindecodex/jekyllrb-contentful.git"
+  },
+  "author": "vindecode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vindecodex/jekyllrb-contentful/issues"
+  },
+  "homepage": "https://github.com/vindecodex/jekyllrb-contentful#readme"
+}
