@@ -29,15 +29,15 @@ jobs:
 
       - run: gem update --system
       - run: gem install bundler
-      - run: bundle install
+      # - run: bundle install
       - run: npm install --save firebase-tools
 
-      - run:
-          name: Jekyll contentful
-          command: bundle exec jekyll contentful
-      - run:
-          name: install dependencies
-          command: bundle exec jekyll build
+      # - run:
+          # name: Jekyll contentful
+          # command: bundle exec jekyll contentful
+      # - run:
+          # name: install dependencies
+          # command: bundle exec jekyll build
       - run:
           name: Deploy
-          command: firebase --version
+          command: ls
