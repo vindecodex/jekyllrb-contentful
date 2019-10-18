@@ -41,4 +41,4 @@ jobs:
           command: bundle exec jekyll build
       - run:
           name: Deploy
-          command: /home/circleci/npm/lib/node_modules/firebase-tools/lib/bin/firebase --version
+          command: ls
