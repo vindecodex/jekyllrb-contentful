@@ -23,6 +23,8 @@ jobs:
 
       - run: gem update --system
       - run: gem install bundler
+      - run: bundle install
+
 
       - run:
           name: Jekyll contentful
